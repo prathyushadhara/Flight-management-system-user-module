@@ -10,7 +10,7 @@ import com.dxc.entities.User;
 @Component
 public class UserUtil {
 	 public UserDto userDto(User user){
-	    	UserDto dto=new UserDto(user.getUserId(),user.getUserType(),user.getUserName(),user.getEmail(),user.getUserPhone(),user.getPassword());
+	    	UserDto dto=new UserDto(user.getUserId(),user.getUserName(),user.getUserType(),user.getEmail(),user.getUserPhone(),user.getPassword());
 	        return dto;
 	    }
 

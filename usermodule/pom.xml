@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dxc</groupId>
-    <artifactId>flightmgt</artifactId>
+    <artifactId>usermodule</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>flightmgt</name>
-    <description>project for flightmgt</description>
+    <name>usermodule</name>
+    <description>project for usermodule</description>
 
     <properties>
         <java.version>1.8</java.version>
