@@ -1,8 +1,10 @@
 package com.dxc.dto;
 
+
 public class UserDto {
 
 	private int userId;
+	
 	private String userType;
 	private String userName;
 	private String email;

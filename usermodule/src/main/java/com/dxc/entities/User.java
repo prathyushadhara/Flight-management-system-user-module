@@ -12,14 +12,20 @@ public class User {
 	@Id
 	@GeneratedValue
 	private int userId;
+
 	private String userType;
+
 	private String userName;
+
 	private String email;
+
 	private Long userPhone;
+
 	private String password;
-	
+
 	public User() {
 	}
+
 	public User(String userType, String userName, String email, Long userPhone, String password) {
 		this.userType = userType;
 		this.userName = userName;
@@ -27,6 +33,7 @@ public class User {
 		this.userPhone = userPhone;
 		this.password = password;
 	}
+
 	public int getUserId() {
 		return userId;
 	}

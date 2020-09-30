@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.dxc.dao.IUserDao;
 import com.dxc.entities.User;
-import com.dxc.exceptions.InvalidArgumentException;
 import com.dxc.exceptions.UserNotFoundException;
 
 import java.util.Optional;
@@ -20,17 +19,12 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public User addUser(User user) {
-		validate(user);
 		user = userDao.save(user);
 		return user;
 
 	}
 
-	public void validate(User user) {
-		if (user == null) {
-			throw new InvalidArgumentException("user can not be null");
-		}
-	}
+	
 
 	@Override
 	public User viewUserById(int userId) {
