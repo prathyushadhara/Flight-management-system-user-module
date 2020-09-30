@@ -13,7 +13,7 @@ public class UserDto {
 
 	}
 
-	public UserDto(int userId, String userType, String userName, String email, Long userPhone, String password) {
+	public UserDto(int userId, String userName, String userType, String email, Long userPhone, String password) {
 		this.userId = userId;
 	
 		this.userType = userType;

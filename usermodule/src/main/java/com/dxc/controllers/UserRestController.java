@@ -17,14 +17,15 @@ import com.dxc.dto.CreateUserRequest;
 import com.dxc.dto.UserDto;
 import com.dxc.entities.User;
 import com.dxc.exceptions.UserNotFoundException;
-import com.dxc.service.UserServiceImpl;
+import com.dxc.service.IUserService;
+
 import com.dxc.util.UserUtil;
 
 @RestController
 @RequestMapping({ "/users" })
 public class UserRestController {
 	@Autowired
-	UserServiceImpl userService;
+	private IUserService userService;
 	@Autowired
 	private UserUtil userUtil;
 
@@ -36,7 +37,7 @@ public class UserRestController {
 		long userPhone = data.getUserPhone();
 		String password = data.getPassword();
 
-		User user = new User(userName, userType, email, userPhone, password);
+		User user = new User(userType, userName, email, userPhone, password);
 		user = userService.addUser(user);
 		UserDto response = userUtil.userDto(user);
 		return response;
