@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dxc.dto.CreateUserRequest;
-
 import com.dxc.dto.UserDto;
 import com.dxc.entities.User;
 import com.dxc.exceptions.UserNotFoundException;
 import com.dxc.service.IUserService;
-
 import com.dxc.util.UserUtil;
 
+
+
 @RestController
-@RequestMapping({ "/users" })
+@RequestMapping("/users")
 public class UserRestController {
 	@Autowired
 	private IUserService userService;
